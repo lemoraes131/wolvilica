@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cachorros Fofos</title>
+  <meta name="description" content="Um site com fotos, curiosidades e amor por cachorros fofos.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="logo" href="index.html">🐶 Cachorros Fofos</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">Sobre</a>
+        <a href="curiosidades.html">Curiosidades</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <button id="menuToggle" class="menu-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?auto=format&fit=crop&w=1350&q=80" alt="Cachorro fofo" class="hero-img">
+      <div class="hero-content container">
+        <h1>Bem-vindo ao mundo dos <span class="accent">cachorros fofos</span></h1>
+        <p>Fotos, curiosidades e alegria — tudo em um lugar fofo e responsivo.</p>
+        <a class="btn primary" href="#galeria">Ver galeria</a>
+      </div>
+    </section>
+
+    <section id="galeria" class="container gallery-section">
+      <h2>Galeria</h2>
+      <p class="lead">Imagens livres de direitos autorais — passe o mouse para ver efeitos.</p>
+
+      <div class="carousel" aria-roledescription="carousel">
+        <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+        <div class="carousel-track">
+          <!-- Itens do carrossel -->
+          <div class="card">
+            <img src="https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cachorrinho 1">
+            <div class="card-caption">Soneca de domingo</div>
+          </div>
+          <div class="card">
+            <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cachorrinho 2">
+            <div class="card-caption">Brincadeira no parque</div>
+          </div>
+          <div class="card">
+            <img src="https://images.pexels.com/photos/4587993/pexels-photo-4587993.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cachorrinho 3">
+            <div class="card-caption">Olhar doce</div>
+          </div>
+        </div>
+        <button class="carousel-btn next" aria-label="Próximo">›</button>
+      </div>
+
+      <div class="grid">
+        <!-- Galeria com hover -->
+        <figure class="grid-item">
+          <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=800&q=60" alt="Dog 4">
+          <figcaption>Amor em quatro patas</figcaption>
+        </figure>
+        <figure class="grid-item">
+          <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=800&q=60" alt="Dog 5">
+          <figcaption>Hora da brincadeira</figcaption>
+        </figure>
+        <figure class="grid-item">
+          <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?auto=format&fit=crop&w=800&q=60" alt="Dog 6">
+          <figcaption>Descansando no sol</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="container ctas">
+      <h2>Curta e compartilhe</h2>
+      <p>Se gostou, envie para um amigo ou visite a página de curiosidades.</p>
+      <a class="btn" href="curiosidades.html">Ler curiosidades</a>
+      <a class="btn ghost" href="contact.html">Entrar em contato</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Cachorros Fofos — Imagens via Unsplash / Pexels (livres para uso).</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
