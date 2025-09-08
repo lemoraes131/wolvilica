@@ -1,0 +1,111 @@
+/* style.css - design limpo, responsivo e 'fofo' */
+:root{
+  --bg:#fffaf6;
+  --card:#ffffff;
+  --accent:#ff7aa2;
+  --muted:#6b6b6b;
+  --radius:14px;
+  --container:1100px;
+  --shadow:0 10px 25px rgba(16,24,40,0.06);
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#222;margin:0;line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+.site-header{background:transparent;padding:.8rem 0}
+.nav-row{display:flex;align-items:center;gap:1rem;justify-content:space-between}
+.logo{font-family:Pacifico, cursive;font-size:1.4rem;text-decoration:none;color:#222}
+.main-nav a{margin-left:1rem;text-decoration:none;color:#333;font-weight:600}
+.menu-toggle{display:none;background:none;border:0;font-size:1.3rem}
+
+.hero{position:relative;border-radius:18px;overflow:hidden;margin:1rem 0}
+.hero-img{width:100%;height:370px;object-fit:cover;filter:saturate(1.02)}
+.hero-content{position:absolute;left:1rem;bottom:1.6rem;color:#fff;text-shadow:0 6px 18px rgba(0,0,0,0.35)}
+.hero h1{font-size:2.2rem;margin:0}
+.hero .accent{background:linear-gradient(90deg,#ffb3c6,#ffd1a9);padding:.2rem .5rem;border-radius:8px;color:#5a2b2b}
+.lead{color:var(--muted)}
+
+.gallery-section{padding:2rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.grid-item{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);transition:transform .28s ease,box-shadow .28s}
+.grid-item img{width:100%;height:220px;object-fit:cover;display:block}
+.grid-item figcaption{padding:.6rem;font-weight:600}
+.grid-item:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(16,24,40,0.12)}
+
+.card{min-width:280px;border-radius:12px;overflow:hidden;margin:0 .6rem;background:var(--card);box-shadow:var(--shadow)}
+.card img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .6s ease}
+.card:hover img{transform:scale(1.06)}
+.card-caption{padding:.6rem;font-weight:600}
+
+.ctas{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;padding:2rem 0}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:999px;text-decoration:none;border:2px solid transparent;font-weight:700}
+.btn.primary{background:var(--accent);color:#fff;box-shadow:0 10px 20px rgba(255,122,162,0.12)}
+.btn.ghost{background:transparent;border-color:rgba(0,0,0,0.08)}
+
+.site-footer{padding:1.6rem 0;color:var(--muted);text-align:center}
+.page-content{padding:2rem 0}
+.contact-page form{max-width:640px}
+label{display:block;margin-top:1rem;font-weight:700}
+input,textarea{width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(0,0,0,0.08);margin-top:.4rem}
+.note{color:var(--muted);margin-top:.6rem}
+
+/* Carousel */
+.carousel{display:flex;align-items:center;gap:.4rem;overflow:hidden;margin:1rem 0}
+.carousel-track{display:flex;transition:transform .45s ease}
+.carousel-btn{background:rgba(255,255,255,0.9);border:0;padding:.6rem 1rem;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+
+/* Responsiveness */
+@media (max-width:800px){
+  .hero-img{height:260px}
+  .main-nav{display:none}
+  .menu-toggle{display:block}
+}
+
+@media (max-width:480px){
+  .hero h1{font-size:1.4rem}
+}
+
+Em seg., 8 de set. de 2025, 10:30 AM, LETÍCIA MORAES <leticiafrancine13062007@gmail.com> escreveu:
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sobre — Cachorros Fofos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="logo" href="index.html">🐶 Cachorros Fofos</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">Sobre</a>
+        <a href="curiosidades.html">Curiosidades</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <h1>Sobre este site</h1>
+    <p>Este site nasceu para reunir imagens e pequenas curiosidades que celebrem a fofura dos cães. Ideal para amantes de pets que querem sorrir e aprender algo novo.</p>
+
+    <section>
+      <h2>Propósito</h2>
+      <ul>
+        <li>Divertir e inspirar quem visita.</li>
+        <li>Indicar imagens livres de direitos autorais para uso pessoal.</li>
+        <li>Informar com curiosidades curtas e verificadas.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year2"></span> Cachorros Fofos</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year2').innerText = new Date().getFullYear();</script>
+</body>
+</html>
